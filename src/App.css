@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+:root {
+
+  --main_color : rgba(11,13,23,1);
+  --snd_color : rgba(208,214,249,1);
+  --third-color : rgba(255,255,255,1);
+
+  --main-font : 'Bellefair', serif; 
+  --snd-font : 'Barlow Condensed', sans-serif;
+  --text-font : 'Barlow', sans-serif;
+  --size : 8px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+h1,h2,h3,h4{
+  font-family: var(--main-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h5{
+  font-family: var(--snd-font);
+  color : var(--snd_color)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subHeading_1, .subHeading_2, .text_nav{
+  font-family: var(--snd-font);
 }
 
-.App-link {
-  color: #61dafb;
+.text{
+  font-family: var(--text-font);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text_nav{
+  font-family: var(--snd-font);  
 }
+
+h1,h2,h2,h4,h5,.subHeading_1, .subHeading_2, .text_nav,.text{
+  color : var(--third-color)
+}
+
+.button_explore{}
+
+
+

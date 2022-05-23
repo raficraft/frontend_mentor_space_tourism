@@ -5,7 +5,32 @@ export default function Header() {
     <header>
       <h1>logo</h1>
       <nav>
-        <ul></ul>
+        <ul>
+          <li>
+            <a href="#">
+              <span>00</span>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>01</span>
+              destination
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>02</span>
+              crew
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>03</span>
+              technology
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
   );
