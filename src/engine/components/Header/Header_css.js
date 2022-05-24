@@ -1,8 +1,6 @@
 import { S } from "../../styled/function";
 import styled from "styled-components";
 
-const refSize = 1440;
-
 export const WrapperHeader = styled.header`
   ${S.flex("row", "space-between", "center")};
   margin-top: ${S.spacing(8)};

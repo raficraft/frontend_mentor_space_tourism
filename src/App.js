@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Layout from "./engine/components/Layout/Layout";
 import { Routes, Route, useLocation } from "react-router-dom";
