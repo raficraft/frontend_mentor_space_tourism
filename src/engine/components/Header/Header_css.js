@@ -43,7 +43,7 @@ export const WrapperHeader = styled.header`
     }
   }
 
-  nav {
+  .nav_desktop {
     padding: 0 165px 0 123px;
     ${S.flex("row", "flex-start", "flex-start")};
     background-color: rgba(255, 255, 255, 0.04);
@@ -67,7 +67,6 @@ export const WrapperHeader = styled.header`
       margin: 0 14px;
       padding: ${S.spacing(8)} 0;
       border-bottom: 3px solid rgba(255, 255, 255, 0);
-      cursor: pointer;
       &.active {
         border-bottom: 3px solid rgba(255, 255, 255, 1);
       }
@@ -80,6 +79,29 @@ export const WrapperHeader = styled.header`
         @media screen and (max-width: 1024px) {
           display: none;
         }
+      }
+    }
+  }
+
+  .nav_mobil {
+    ${S.flex("column", "flex-start", "flex-start")};
+    margin: 118px 0 0 32px;
+    gap: 1rem;
+    a {
+      align-self: stretch;
+      padding: 0.5rem 0;
+
+      &.active {
+        border-right: 3px solid rgba(255, 255, 255, 1);
+      }
+
+      &:hover {
+        border-right: 3px solid rgba(255, 255, 255, 0.5);
+      }
+
+      span {
+        margin: 0 11px 0 0;
+        font-weight: bold;
       }
     }
   }

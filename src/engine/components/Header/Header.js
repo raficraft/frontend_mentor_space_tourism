@@ -7,34 +7,13 @@ export default function Header() {
   const isMobil = useMediaQuery("(max-width: 768px)");
   const isTablet = useMediaQuery("(min-width: 769px)");
 
-  function navBar() {
-    return (
-      <nav>
-        <NavLink to="/" className="text_nav">
-          <span>00</span>Home
-        </NavLink>
-
-        <NavLink to="/destination" className="text_nav">
-          <span>01</span>Destination
-        </NavLink>
-
-        <NavLink to="/crew" className="text_nav">
-          <span>02</span>Crew
-        </NavLink>
-
-        <NavLink to="/technology" className="text_nav">
-          <span>02</span>Technology
-        </NavLink>
-      </nav>
-    );
-  }
   return (
     <WrapperHeader>
       <Logo></Logo>
       <span className="line">
         <span class="line_item"></span>
       </span>
-      {isTablet && navBar()}
+      {isTablet && <NavBar style={"nav_desktop"} />}
       {isMobil && <BurgerMenu />}
     </WrapperHeader>
   );
@@ -57,10 +36,45 @@ function BurgerMenu() {
 
       <BurgerContainer className="burgerMenu" data-isopen={isOpen}>
         <div>
-          <h2>Content nav</h2>
+          <NavBar
+            style={"nav_mobil"}
+            setter={() => {
+              setIsOpen(!isOpen);
+            }}
+          ></NavBar>
         </div>
       </BurgerContainer>
     </>
+  );
+}
+
+function NavBar({ style, setter = false }) {
+  return (
+    <nav className={style}>
+      <NavLink to="/" className="text_nav" onClick={setter ? setter : null}>
+        <span>00</span>Home
+      </NavLink>
+
+      <NavLink
+        to="/destination"
+        className="text_nav"
+        onClick={setter ? setter : null}
+      >
+        <span>01</span>Destination
+      </NavLink>
+
+      <NavLink to="/crew" className="text_nav" onClick={setter ? setter : null}>
+        <span>02</span>Crew
+      </NavLink>
+
+      <NavLink
+        to="/technology"
+        className="text_nav"
+        onClick={setter ? setter : null}
+      >
+        <span>02</span>Technology
+      </NavLink>
+    </nav>
   );
 }
 
