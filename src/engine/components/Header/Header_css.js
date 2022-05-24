@@ -6,6 +6,7 @@ const refSize = 1440;
 export const WrapperHeader = styled.header`
   ${S.flex("row", "space-between", "center")};
   margin-top: ${S.spacing(8)};
+  position: relative;
 
   @media screen and (max-width: 1024px) {
     margin: 0;
@@ -14,7 +15,7 @@ export const WrapperHeader = styled.header`
     margin: auto 0 auto ${S.spacing(11)};
     padding-right: 3rem;
     @media screen and (max-width: 769px) {
-      margin: auto 0 auto ${S.spacing(8)};
+      margin: 24px 0 auto ${S.spacing(8)};
     }
   }
 
@@ -79,6 +80,68 @@ export const WrapperHeader = styled.header`
         @media screen and (max-width: 1024px) {
           display: none;
         }
+      }
+    }
+  }
+`;
+
+export const BurgerContainer = styled.aside`
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  ${S.responsiveContainer("68%")}
+  backdrop-filter: blur(81.55px);
+  z-index: 10;
+  transform: translateX(100%);
+  transition: 0.8s;
+
+  &[data-isOpen="true"] {
+    transition: 0.8s;
+    transform: translateX(0);
+  }
+`;
+export const BurgerIcon = styled.span`
+  ${S.flex("column", "space-between", "flex-start")};
+  position: absolute;
+  ${S.size("24px", "21px")}
+  content : "";
+  right: 1.5rem;
+  top: 2rem;
+  z-index: 100;
+  cursor: pointer;
+
+  .burger_item {
+    display: flex;
+    content: " ";
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: 0.8s;
+    transform: translateY(0);
+    &--middle {
+      transition: 0.8s;
+      transform: translateX(0);
+    }
+  }
+
+  &[data-isopen="true"] {
+    .burger_item {
+      transition: 0.8s;
+      transform: translateY(0);
+
+      &--middle {
+        transition: 0.8s;
+        transform: translateX(500%);
+      }
+
+      &--top {
+        transition: 0.8s;
+        transform: translateY(9px) rotate(45deg);
+      }
+      &--bottom {
+        transition: 0.8s;
+        transform: translateY(-9px) rotate(-45deg);
       }
     }
   }

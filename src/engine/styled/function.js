@@ -45,6 +45,10 @@ export const S = {
     return `box-shadow : 0 2px 4px ${color}`;
   },
 
+  centerAbsolute: (size) => {
+    return `calc(50% - ${size} / 2)`;
+  },
+
   iframeResponsive: (height, width) => css`
     overflow: hidden;
     padding-top: percentage(height / width);

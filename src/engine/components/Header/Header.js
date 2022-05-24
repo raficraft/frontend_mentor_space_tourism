@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { WrapperHeader } from "./Header_css";
+import useMediaQuery from "../../hooks/useMediaQueries";
+import { BurgerContainer, BurgerIcon, WrapperHeader } from "./Header_css";
 
 export default function Header() {
+  const isMobil = useMediaQuery("(max-width: 768px)");
+  const isTablet = useMediaQuery("(min-width: 769px)");
+
   function navBar() {
     return (
       <nav>
@@ -30,8 +34,33 @@ export default function Header() {
       <span className="line">
         <span class="line_item"></span>
       </span>
-      {navBar()}
+      {isTablet && navBar()}
+      {isMobil && <BurgerMenu />}
     </WrapperHeader>
+  );
+}
+
+function BurgerMenu() {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <BurgerIcon
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+        data-isopen={isOpen}
+      >
+        <span className="burger_item burger_item--top"></span>
+        <span className="burger_item burger_item--middle"></span>
+        <span className="burger_item burger_item--bottom"></span>
+      </BurgerIcon>
+
+      <BurgerContainer className="burgerMenu" data-isopen={isOpen}>
+        <div>
+          <h2>Content nav</h2>
+        </div>
+      </BurgerContainer>
+    </>
   );
 }
 
