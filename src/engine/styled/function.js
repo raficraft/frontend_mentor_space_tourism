@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-const space = 8;
+const space = 5;
 
 export const S = {
   flex: (

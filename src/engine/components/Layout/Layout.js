@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../Header/Header";
+import { Wrapper } from "./Layout_css";
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <Wrapper>
       <Header></Header>
-      {children}
-    </div>
+      <main> {children}</main>
+    </Wrapper>
   );
 }
