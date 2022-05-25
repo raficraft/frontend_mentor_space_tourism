@@ -20,7 +20,7 @@ export default function Home() {
           <NavLink to="/destination" className="button_big--link">
             <span className="button_big--text">Explore</span>
           </NavLink>
-          <span className="button_big--item"></span>
+          <p className="button_big--item"></p>
         </div>
       </div>
     </Home_Container>

@@ -16,11 +16,11 @@ export const Home_Container = styled.section`
       margin-right: 77px;
     }
     h1 {
-      margin: 1.5rem 0;
+      margin: 3rem 0 2rem 0;
     }
     h5 {
       line-height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .text {
       margin: 1rem 0;
@@ -37,9 +37,7 @@ export const Home_Container = styled.section`
       ${S.flexCenter()}
       ${S.size("274px", "274px")};
       background-color: #fff;
-      font-size: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 50%;
       position: relative;
@@ -53,17 +51,19 @@ export const Home_Container = styled.section`
       ${S.size("274px", "274px")};
       top: ${S.centerAbsolute(btnSize)};
       left: ${S.centerAbsolute(btnSize)};
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.85);
       font-size: 2rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      background-color: #fff;
       border-radius: 50%;
       position: absolute;
       z-index: 100;
     }
 
     &--text {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       transition: 1s;
       transform: scale(1);
     }
@@ -74,7 +74,8 @@ export const Home_Container = styled.section`
     }
     .button_big--link:hover .button_big--text {
       transition: 1s;
-      transform: scale(1.2);
+      transform: scale(1.15);
+      letter-spacing: 6px;
     }
   }
 `;
