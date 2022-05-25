@@ -18,7 +18,6 @@ function App() {
       }`}
     >
       <Layout>
-        <h1>learn react</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />

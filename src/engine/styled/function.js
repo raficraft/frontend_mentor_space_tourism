@@ -21,12 +21,17 @@ export const S = {
     width: ${width};
   `,
 
+  emptyAbsolute: () => css`
+    content: " ";
+    position: absolute;
+  `,
+
   flexCenter: (direction, wrap = "nowrap") => css`
     display: flex;
     flex-direction: ${direction};
     flex-wrap: ${wrap};
     justify-content: center;
-    align-content: center;
+    align-items: center;
   `,
 
   round: (radius) => css`
