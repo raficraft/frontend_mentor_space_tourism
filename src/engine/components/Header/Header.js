@@ -5,7 +5,9 @@ import { WrapperHeader } from "./Header_css";
 export default function Header({ children }) {
   return (
     <WrapperHeader data-testid="header_main">
-      <Logo data-testid="logo"></Logo>
+      <div className="logo">
+        <Logo data-testid="logo" className="logo_scaling"></Logo>
+      </div>
 
       <span className="line">
         <span className="line_item"></span>

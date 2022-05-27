@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Explore_Button from "../../components/Btn/Explore_Button/Explore_Button";
 import { Home_Container } from "./Home.css";
 
 export default function Home() {
@@ -15,14 +16,7 @@ export default function Home() {
           experience!
         </p>
       </div>
-      <div className="home_content home_content--right">
-        <div className="button_big">
-          <NavLink to="/destination" className="button_big--link">
-            <span className="button_big--text">Explore</span>
-          </NavLink>
-          <p className="button_big--item"></p>
-        </div>
-      </div>
+      <Explore_Button></Explore_Button>
     </Home_Container>
   );
 }

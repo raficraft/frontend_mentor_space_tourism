@@ -9,11 +9,16 @@ export const WrapperHeader = styled.header`
   @media screen and (max-width: 1024px) {
     margin: 0;
   }
-  svg {
+  .logo {
     margin: auto 0 auto ${S.spacing(11)};
     padding-right: 3rem;
     @media screen and (max-width: 769px) {
       margin: 24px 0 auto ${S.spacing(8)};
+    }
+    @media screen and (max-width: 600px) {
+      svg {
+        ${S.size("40px")}
+      }
     }
   }
 

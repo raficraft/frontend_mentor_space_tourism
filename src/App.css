@@ -26,8 +26,6 @@ h3{
 
 h4{font-size : 32px}
 
-
-
 h1,
 h2,
 h3,
@@ -43,6 +41,8 @@ h5 {
   letter-spacing: 4.75px;
   text-transform: uppercase;
 }
+
+
 
 .subHeading_1,
 .subHeading_2,
@@ -76,9 +76,7 @@ h5,
   color: var(--third-color);
 }
 
-.text{
-  color: var(--snd-color);
-}
+
 
 .bg_main {
   background-repeat: no-repeat;
@@ -105,7 +103,7 @@ h5,
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
   .bg_home {
     background-image: url("/public/assets/home/background-home-tablet.jpg");

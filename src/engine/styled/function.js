@@ -16,9 +16,9 @@ export const S = {
     align-content: ${align};
   `,
 
-  size: (width, height) => css`
-    height: ${height};
+  size: (width, height = width) => css`
     width: ${width};
+    height: ${height};
   `,
 
   emptyAbsolute: () => css`
