@@ -37,10 +37,14 @@ export default function Destination() {
     return (
       <section className="destination_content">
         <div className="destination_content--left">
-          <img src={data.items[current].images.png} />
+          <img
+            src={data.items[current].images.png}
+            alt={`illustration of ${data.items[current].name}`}
+          />
         </div>
+
         <div className="destination_content--right">
-          <nav>{createNav()}</nav>
+          {createNav()}
           <div>
             <header>
               <h2>{data.items[current].name}</h2>

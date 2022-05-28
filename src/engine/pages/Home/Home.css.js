@@ -5,7 +5,6 @@ export const Home_Container = styled.section`
   ${S.flex("row", "space-between", "flex-start")}
   padding-top: 251px;
   flex: 1;
-  background-color: rgba(120, 50, 12, 0.4);
 
   @media screen and (max-width: 800px) {
     ${S.flex("column", "flex-start", "center")}
@@ -20,6 +19,7 @@ export const Home_Container = styled.section`
       max-width: 450px;
       max-height: 450px;
       margin-left: 167px;
+
       h1 {
         margin: 3rem 0 2rem 0;
       }
@@ -50,23 +50,27 @@ export const Home_Container = styled.section`
         }
       }
       @media screen and (max-width: 600px) {
-        margin: 0 auto 0;
+        margin: 0 auto 0 auto;
         h1 {
-          margin: 1.5rem 0;
+          margin: 1.5rem auto;
+          padding: 0;
         }
         h5 {
-          margin: 0;
+          margin: 0 auto;
           font-size: 1rem;
         }
         h5,
         .text {
           text-align: center;
+          ${S.responsiveContainer("80%")}
+          padding : 0;
         }
         .text {
           font-size: 15px;
           font-weight: 300;
-          padding: 0 1.5rem 5rem 0;
+          padding: 0 0rem 5rem 0;
           line-height: 25px;
+          margin: auto;
         }
       }
     }

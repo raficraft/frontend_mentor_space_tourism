@@ -12,7 +12,7 @@ export const WrapperHeader = styled.header`
   .logo {
     margin: auto 0 auto ${S.spacing(11)};
     padding-right: 2rem;
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 1000px) {
       margin: 24px 0 auto ${S.spacing(8)};
     }
     @media screen and (max-width: 600px) {
@@ -41,7 +41,7 @@ export const WrapperHeader = styled.header`
       background-color: #383b4b;
     }
 
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 1000px) {
       display: none;
     }
   }

@@ -98,9 +98,21 @@ h5,
 }
 
 
+
+
 .pages_header {
   margin: 76px 0 4rem 166px; 
 }
+
+@media screen and (max-width: 1000px) {
+  .pages_header{
+    margin: 38px 0 0 40px;
+
+  }
+  
+}
+
+
 
 .pages_header span {
   margin: 0 1rem 0 0;
@@ -111,15 +123,19 @@ h5,
 
 .bg_home {
   background-image: url("/public/assets/home/background-home-desktop.jpg");
+  background-position: center;
 }
 .bg_crew {
   background-image: url("/public/assets/crew/background-crew-desktop.jpg");
+  background-position: center;
 }
 .bg_destinations {
   background-image: url("/public/assets/destinations/background-destinations-desktop.jpg");
+  background-position: center;
 }
 .bg_technology {
   background-image: url("/public/assets/technology/background-technology-desktop.jpg");
+  background-position: center;
 }
 
 

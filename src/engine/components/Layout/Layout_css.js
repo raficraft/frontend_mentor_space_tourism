@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
   min-height: 100%;
   height: 100%;
   width: 100%;
+  max-width: 100%;
   overflow-y: hidden;
 
   main {
