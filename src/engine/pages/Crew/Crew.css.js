@@ -37,9 +37,6 @@ export const Crew_Container = styled.section`
         }
         h3 {
           margin: 0 0 2rem 0;
-          @media screen and (max-width: 1000px) {
-            font-size: 40px;
-          }
         }
         .text {
           ${S.responsiveContainer("518px")}

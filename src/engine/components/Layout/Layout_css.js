@@ -7,7 +7,7 @@ export const Wrapper = styled.section`
   height: 100%;
   width: 100%;
   max-width: 100%;
-  overflow-y: hidden;
+  overflow-x: hidden;
 
   main {
     ${S.flex("column", "flex-start", "center")};

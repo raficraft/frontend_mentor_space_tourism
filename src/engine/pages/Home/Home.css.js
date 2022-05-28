@@ -33,12 +33,10 @@ export const HomeContainer = styled.section`
         margin: 0 auto 116px auto;
         h1 {
           margin: 1.5rem 0;
-          font-size: 80px;
           text-align: center;
         }
         h5 {
           margin: 0;
-          font-size: 1.5rem;
         }
         h5,
         .text {
@@ -46,7 +44,6 @@ export const HomeContainer = styled.section`
         }
         .text {
           font-weight: 300;
-          font-size: 16px;
         }
       }
       @media screen and (max-width: 600px) {
@@ -57,16 +54,14 @@ export const HomeContainer = styled.section`
         }
         h5 {
           margin: 0 auto;
-          font-size: 1rem;
         }
         h5,
         .text {
           text-align: center;
-          ${S.responsiveContainer("80%")}
+          ${S.responsiveContainer("90%")}
           padding : 0;
         }
         .text {
-          font-size: 15px;
           font-weight: 300;
           padding: 0 0rem 5rem 0;
           line-height: 25px;

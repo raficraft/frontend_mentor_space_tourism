@@ -80,7 +80,6 @@ export const Destination_Container = styled.section`
 
           @media screen and (max-width: 1000px) {
             h2 {
-              font-size: 80px;
               text-align: center;
             }
           }

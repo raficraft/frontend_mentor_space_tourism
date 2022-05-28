@@ -92,7 +92,6 @@ export const TechContainer = styled.section`
           h3 {
             margin: 0 0 1.5rem 0;
             @media screen and (max-width: 1000px) {
-              font-size: 40px;
               margin: 1rem 0 2rem 0;
             }
           }
