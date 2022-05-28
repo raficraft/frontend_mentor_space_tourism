@@ -24,7 +24,7 @@ export const BurgerIcon = styled.span`
   content : "";
   right: 1.5rem;
   top: 2rem;
-  z-index: 100;
+  z-index: 800;
   cursor: pointer;
 
   .burger_item {

@@ -1,11 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Explore_Button from "../../components/Btn/Explore_Button/Explore_Button";
-import { Home_Container } from "./Home.css";
+import { HomeContainer } from "./Home.css";
 
 export default function Home() {
   return (
-    <Home_Container data-testid="home_container">
+    <HomeContainer data-testid="home_container">
       <div className="home_content home_content--left">
         <h5>So, you want to travel to</h5>
         <h1>Space</h1>
@@ -17,6 +16,6 @@ export default function Home() {
         </p>
       </div>
       <Explore_Button></Explore_Button>
-    </Home_Container>
+    </HomeContainer>
   );
 }

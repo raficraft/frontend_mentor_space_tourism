@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavBar } from "../NavBar/NavBar";
 import { BurgerContainer, BurgerIcon } from "./Burger_menu_css";
+import Portal from "../../../Portal/Portal";
 
 export function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);

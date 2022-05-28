@@ -97,9 +97,6 @@ h5,
   flex : 1;
 }
 
-
-
-
 .pages_header {
   margin: 76px 0 4rem 166px; 
 }
@@ -107,12 +104,8 @@ h5,
 @media screen and (max-width: 1000px) {
   .pages_header{
     margin: 38px 0 0 40px;
-
-  }
-  
+  }  
 }
-
-
 
 .pages_header span {
   margin: 0 1rem 0 0;

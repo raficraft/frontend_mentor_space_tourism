@@ -1,7 +1,7 @@
 import { S } from "../../styled/function";
 import styled from "styled-components";
 
-export const Home_Container = styled.section`
+export const HomeContainer = styled.section`
   ${S.flex("row", "space-between", "flex-start")}
   padding-top: 251px;
   flex: 1;
