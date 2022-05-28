@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.section`
   ${S.flex("row", "space-between", "flex-start")}
-  padding-top: 251px;
   flex: 1;
+  padding-top: 251px;
 
   @media screen and (max-width: 800px) {
     ${S.flex("column", "flex-start", "center")}
@@ -62,10 +62,10 @@ export const HomeContainer = styled.section`
           padding : 0;
         }
         .text {
-          font-weight: 300;
-          padding: 0 0rem 5rem 0;
-          line-height: 25px;
           margin: auto;
+          padding: 0 0rem 5rem 0;
+          font-weight: 300;
+          line-height: 25px;
         }
       }
     }

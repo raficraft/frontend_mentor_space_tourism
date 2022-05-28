@@ -21,8 +21,8 @@ export const TechContainer = styled.section`
       }
 
       &--left {
-        margin: 126px 0 0 165px;
         ${S.flex("row", "space-between", "flex-start")}
+        margin: 126px 0 0 165px;
 
         @media screen and (max-width: 1000px) {
           ${S.flex("column", "space-between", "flex-start")}
@@ -31,9 +31,9 @@ export const TechContainer = styled.section`
 
         aside {
           ${S.flex("column", "space-between", "flex-start", "wrap")}
-          height: 100%;
-          max-width: 80px;
           align-self: stretch;
+          max-width: 80px;
+          height: 100%;
           @media screen and (max-width: 1000px) {
             ${S.flex("row", "center", "flex-start", "wrap")}
             max-width: 100%;
@@ -50,29 +50,29 @@ export const TechContainer = styled.section`
           }
           button {
             ${S.size("80px", "80px")}
-            border-radius: 50%;
             padding: 0;
+            border-radius: 50%;
             font-family: "Bellefair", serif;
             font-size: 2rem;
-            cursor: pointer;
+            color: white;
             border: 1px solid rgba(255, 255, 255, 0.4);
             background-color: transparent;
-            color: white;
             transition: 0.5s;
+            cursor: pointer;
             @media screen and (max-width: 1000px) {
               ${S.size("58px", "58px")}
               font-size: 24px;
             }
 
             &:hover {
-              transition: 0.5s;
               border: 1px solid rgba(255, 255, 255, 1);
+              transition: 0.5s;
             }
 
             &[data-active="true"] {
-              transition: 0.5s;
-              background-color: white;
               color: rgba(11, 13, 23, 1);
+              background-color: white;
+              transition: 0.5s;
             }
           }
         }
