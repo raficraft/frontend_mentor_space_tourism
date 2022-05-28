@@ -90,6 +90,7 @@ export const WrapperHeader = styled.header`
     ${S.flex("column", "flex-start", "flex-start")};
     margin: 118px 0 0 32px;
     gap: 1rem;
+    z-index: 500;
     a {
       align-self: stretch;
       padding: 0.5rem 0;

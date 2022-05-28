@@ -8,7 +8,7 @@ export const BurgerContainer = styled.aside`
   right: 0;
   ${S.responsiveContainer("68%")}
   backdrop-filter: blur(81.55px);
-  z-index: 10;
+  z-index: 500;
   transform: translateX(100%);
   transition: 0.8s;
 
