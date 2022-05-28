@@ -19,7 +19,7 @@ export const Home_Container = styled.section`
     &--left {
       max-width: 450px;
       max-height: 450px;
-      margin-left: 163px;
+      margin-left: 167px;
       h1 {
         margin: 3rem 0 2rem 0;
       }

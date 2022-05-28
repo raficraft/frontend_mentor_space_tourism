@@ -3,7 +3,7 @@
 
 :root {
   --main-color: rgba(11, 13, 23, 1);
-  --snd-color: rgba(208, 214, 249, 1);
+  --snd-color: rgb(#D0D6F9);
   --third-color: rgba(255, 255, 255, 1);
 
   --main-font: "Bellefair", serif;
@@ -19,6 +19,7 @@ h1{
 
 h2{
   font-size: 100px;
+  text-transform: uppercase;
 }
 h3{
   font-size : 56px;
@@ -31,6 +32,8 @@ h2,
 h3,
 h4 {
   font-family: var(--main-font);
+  text-transform: uppercase;
+  color : var(--third-color)
 }
 
 h5 {
@@ -43,9 +46,16 @@ h5 {
 }
 
 
+.subHeading_2{
+  font-size:14px;
+  letter-spacing: 2.35px;
+  color : var(--snd-color);
+  font-family: var(--snd-font);
+  text-transform: uppercase;
+}
+
 
 .subHeading_1,
-.subHeading_2,
 .text_nav {
   font-family: var(--snd-font);
   letter-spacing: 2.7px;
@@ -56,6 +66,7 @@ h5 {
   font-family: var(--text-font);
   font-size: 18px;
   line-height: 32px;
+  color : #D0D6F9;
 }
 
 .text_nav {
@@ -71,8 +82,7 @@ h4,
 h5,
 .subHeading_1,
 .subHeading_2,
-.text_nav,
-.text {
+.text_nav {
   color: var(--third-color);
 }
 
@@ -88,6 +98,16 @@ h5,
 }
 
 
+.pages_header {
+  margin: 76px 0 4rem 166px; 
+}
+
+.pages_header span {
+  margin: 0 1rem 0 0;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 .bg_home {
   background-image: url("/public/assets/home/background-home-desktop.jpg");
@@ -95,8 +115,8 @@ h5,
 .bg_crew {
   background-image: url("/public/assets/crew/background-crew-desktop.jpg");
 }
-.bg_destination {
-  background-image: url("/public/assets/destination/background-destination-desktop.jpg");
+.bg_destinations {
+  background-image: url("/public/assets/destinations/background-destinations-desktop.jpg");
 }
 .bg_technology {
   background-image: url("/public/assets/technology/background-technology-desktop.jpg");
@@ -111,8 +131,8 @@ h5,
   .bg_crew {
     background-image: url("/public/assets/crew/background-crew-tablet.jpg");
   }
-  .bg_destination {
-    background-image: url("/public/assets/destination/background-destination-tablet.jpg");
+  .bg_destinations {
+    background-image: url("/public/assets/destinations/background-destinations-tablet.jpg");
   }
   .bg_technology {
     background-image: url("/public/assets/technology/background-technology-tablet.jpg");
@@ -127,8 +147,8 @@ h5,
   .bg_crew {
     background-image: url("/public/assets/crew/background-crew-mobile.jpg");
   }
-  .bg_destination {
-    background-image: url("/public/assets/destination/background-destination-mobile.jpg");
+  .bg_destinations {
+    background-image: url("/public/assets/destinations/background-destinations-mobile.jpg");
   }
   .bg_technology {
     background-image: url("/public/assets/technology/background-technology-mobile.jpg");

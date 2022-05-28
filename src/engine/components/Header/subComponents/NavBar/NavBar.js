@@ -9,7 +9,7 @@ export function NavBar({ style, setter = false }) {
       </NavLink>
 
       <NavLink
-        to="/destination"
+        to="/destinations"
         className="text_nav"
         onClick={setter ? setter : null}
       >
@@ -25,7 +25,7 @@ export function NavBar({ style, setter = false }) {
         className="text_nav"
         onClick={setter ? setter : null}
       >
-        <span>02</span>Technology
+        <span>03</span>Technology
       </NavLink>
     </Container_NavBar>
   );
