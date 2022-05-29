@@ -44,7 +44,7 @@ export default function Crew() {
           </footer>
         </div>
         <div class="crew_content--right">
-          <div>
+          <div className="img_container">
             <img src={data.items[current].images.png} />
           </div>
         </div>
