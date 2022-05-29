@@ -19,6 +19,9 @@ export const TechContainer = styled.section`
         ${S.flex("column-reverse", "flex-start", "center")}
         margin: 60px 0 0 0;
       }
+      @media screen and (max-width: 700px) {
+        margin: 1rem 0 0 0;
+      }
 
       &--left {
         ${S.flex("row", "space-between", "flex-start")}
@@ -27,6 +30,9 @@ export const TechContainer = styled.section`
         @media screen and (max-width: 1000px) {
           ${S.flex("column", "space-between", "flex-start")}
           margin : 56px auto;
+        }
+        @media screen and (max-width: 700px) {
+          margin: 34px auto;
         }
 
         aside {
@@ -64,6 +70,11 @@ export const TechContainer = styled.section`
               font-size: 24px;
             }
 
+            @media screen and (max-width: 1000px) {
+              ${S.size("40px")}
+              font-size: 1rem;
+            }
+
             &:hover {
               border: 1px solid rgba(255, 255, 255, 1);
               transition: 0.5s;
@@ -85,8 +96,16 @@ export const TechContainer = styled.section`
             text-align: center;
           }
 
-          p {
+          @media screen and (max-width: 700px) {
+            ${S.size("85%", "271px")}
+            line-height:25px;
+            font-size: 15px;
+            margin-top: 26px;
+          }
+
+          .text {
             margin: 0 0 1rem 0;
+            line-height: 25px;
           }
 
           h3 {
@@ -94,20 +113,23 @@ export const TechContainer = styled.section`
             @media screen and (max-width: 1000px) {
               margin: 1rem 0 2rem 0;
             }
-          }
-
-          .text {
-            font-weight: 300;
+            @media screen and (max-width: 700px) {
+              margin: 1rem 0 1rem 0;
+            }
           }
         }
       }
 
       &--right {
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1000px) {
           figure {
             ${S.responsiveContainer("100%")}
             img {
               ${S.responsiveContainer("100%")}
+              aspect-ratio : 384/155
+            }
+            @media screen and (max-width: 1000px) {
+              /* height: 170px; */
             }
           }
         }

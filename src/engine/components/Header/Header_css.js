@@ -6,7 +6,7 @@ export const WrapperHeader = styled.header`
   margin-top: ${S.spacing(8)};
   position: relative;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     margin: 0;
   }
   .logo {
@@ -15,7 +15,7 @@ export const WrapperHeader = styled.header`
     @media screen and (max-width: 1000px) {
       margin: 24px 0 auto ${S.spacing(8)};
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       svg {
         ${S.size("40px")}
       }
