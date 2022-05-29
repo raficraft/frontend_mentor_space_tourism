@@ -24,9 +24,15 @@ export const Destination_Container = styled.section`
         margin: 3rem 0 0 165px;
 
         @media screen and (max-width: 1000px) {
-          margin: 60px auto;
+          margin: 32px auto 26px auto;
           img {
             ${S.size("300px")}
+          }
+        }
+
+        @media screen and (max-width: 700px) {
+          img {
+            ${S.size("170px")}
           }
         }
       }
@@ -51,15 +57,14 @@ export const Destination_Container = styled.section`
 
           a {
             display: block;
-            color: white;
-            font-size: 1rem;
-            text-transform: uppercase;
             margin-right: 2rem;
-            letter-spacing: 2.7px;
             padding-bottom: 1.25rem;
-            line-height: 1;
             border-bottom: 3px solid rgba(255, 255, 255, 0);
             transition: 0.5s;
+
+            @media screen and (max-width: 700px) {
+              margin-right: 26px;
+            }
 
             &:hover {
               transition: 0.5s;
@@ -68,6 +73,7 @@ export const Destination_Container = styled.section`
 
             &[data-active="true"] {
               border-bottom: 3px solid rgba(255, 255, 255, 1);
+              color: white;
             }
 
             &:last-child {
@@ -91,6 +97,11 @@ export const Destination_Container = styled.section`
           @media screen and (max-width: 1000px) {
             text-align: center;
           }
+
+          @media screen and (max-width: 700px) {
+            ${S.responsiveContainer("90%")}
+            margin : auto;
+          }
         }
 
         footer {
@@ -100,13 +111,24 @@ export const Destination_Container = styled.section`
           @media screen and (max-width: 1000px) {
             text-align: center;
           }
+
+          @media screen and (max-width: 700px) {
+            ${S.flex("column", "flex-start", "flex-start")}
+            ${S.responsiveContainer("90%")}
+            margin : 32px auto;
+            padding: 32px 0;
+          }
           div {
             flex: 1;
-            p {
+            .subHeading_2 {
               margin: 0 0 1rem 0;
             }
             h4 {
               text-transform: uppercase;
+            }
+
+            @media screen and (max-width: 700px) {
+              margin-bottom: 32px;
             }
           }
         }

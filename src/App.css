@@ -2,7 +2,7 @@
 
 :root {
   --main-color: rgba(11, 13, 23, 1);
-  --snd-color: rgb(#d0d6f9);
+  --snd-color: #d0d6f9;
   --third-color: rgba(255, 255, 255, 1);
 
   --main-font: "Bellefair", serif;
@@ -46,6 +46,47 @@ h5 {
   text-transform: uppercase;
 }
 
+.subHeading_1 {
+  font-size: 28px;
+  font-family: var(--main-font);
+}
+
+.subHeading_2 {
+  font-size: 15px;
+  letter-spacing: 2.35px;
+  color: var(--snd-color);
+  font-family: var(--snd-font);
+  text-transform: uppercase;
+}
+
+.text_nav {
+  letter-spacing: 2.7px;
+  font-weight: 100;
+}
+
+.text {
+  font-family: var(--text-font);
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+  font-weight: 300;
+}
+
+.text_nav {
+  font-family: var(--snd-font);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav_tabs {
+  font-size: 1rem;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--snd-color);
+  font-family: var(--snd-font);
+}
+
 @media screen and (max-width: 1000px) {
   h2 {
     font-size: 80px;
@@ -64,7 +105,7 @@ h5 {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   h1 {
     font-size: 80px;
   }
@@ -87,34 +128,10 @@ h5 {
     font-size: 14;
     letter-spacing: 2.36;
   }
-}
-
-.subHeading_2 {
-  font-size: 15px;
-  letter-spacing: 2.7px;
-  color: var(--snd-color);
-  font-family: var(--snd-font);
-  text-transform: uppercase;
-}
-
-.subHeading_1,
-.text_nav {
-  font-family: var(--snd-font);
-  letter-spacing: 2.7px;
-  font-weight: 100;
-}
-
-.text {
-  font-family: var(--text-font);
-  font-size: 18px;
-  line-height: 32px;
-  color: #d0d6f9;
-}
-
-.text_nav {
-  font-family: var(--snd-font);
-  font-size: 1rem;
-  text-transform: uppercase;
+  .nav_tabs {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
 }
 
 h1,
@@ -123,7 +140,6 @@ h2,
 h4,
 h5,
 .subHeading_1,
-.subHeading_2,
 .text_nav {
   color: var(--third-color);
 }
@@ -144,6 +160,13 @@ h5,
 @media screen and (max-width: 1000px) {
   .pages_header {
     margin: 38px 0 0 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .pages_header {
+    text-align: center;
+    margin: 24px 0 0 0px;
   }
 }
 

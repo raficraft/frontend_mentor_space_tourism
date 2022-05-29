@@ -16,6 +16,7 @@ export default function Destination() {
         {data.items.map((el, key) => {
           return (
             <a
+              className="nav_tabs"
               href="#"
               key={key}
               data-active={key === current ? "true" : "false"}
@@ -54,11 +55,11 @@ export default function Destination() {
           <footer>
             <div>
               <p className="subHeading_2">Avg. distance</p>
-              <h4>{data.items[current].distance}</h4>
+              <h4 className="subHeading_1">{data.items[current].distance}</h4>
             </div>
             <div>
               <p className="subHeading_2">Est. travel time</p>
-              <h4>{data.items[current].travel}</h4>
+              <h4 className="subHeading_1">{data.items[current].travel}</h4>
             </div>
           </footer>
         </div>
@@ -71,7 +72,7 @@ export default function Destination() {
       <div className="destination">
         <header className="pages_header">
           <h5>
-            <span>01</span>Pick up your destination
+            <span>01</span>Pick your destination
           </h5>
         </header>
         {!data.loading ? createItem() : <h2>...loading</h2>}
