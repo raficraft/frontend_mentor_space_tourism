@@ -91,6 +91,10 @@ export const TechContainer = styled.section`
           ${S.size("500px", "271px")}
           margin : 0 0 0 80px;
 
+          .subHeading_2 {
+            margin: 0 0 1rem 0;
+          }
+
           @media screen and (max-width: 1000px) {
             margin: 44px auto;
             text-align: center;
@@ -105,7 +109,7 @@ export const TechContainer = styled.section`
 
           .text {
             margin: 0 0 1rem 0;
-            line-height: 25px;
+            line-height: 32px;
           }
 
           h3 {

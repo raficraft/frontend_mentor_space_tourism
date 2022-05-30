@@ -1,0 +1,24 @@
+{
+  "nav": [
+    {
+      "before": "00",
+      "link": "/",
+      "text": "Home"
+    },
+    {
+      "before": "01",
+      "link": "/destinations",
+      "text": "Destination"
+    },
+    {
+      "before": "02",
+      "link": "/crew",
+      "text": "Crew"
+    },
+    {
+      "before": "03",
+      "link": "/technology",
+      "text": "Technology"
+    }
+  ]
+}

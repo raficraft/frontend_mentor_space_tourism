@@ -5,14 +5,14 @@ import { WrapperHeader } from "./Header_css";
 
 export default function Header({ children }) {
   return (
-    <WrapperHeader data-testid="header_main">
+    <WrapperHeader>
       <div className="logo">
         <NavLink to="/">
-          <Logo data-testid="logo" className="logo_scaling"></Logo>
+          <Logo className="logo_scaling"></Logo>
         </NavLink>
       </div>
 
-      <span className="line">
+      <span className="line" data-testid="line">
         <span className="line_item"></span>
       </span>
       {children}

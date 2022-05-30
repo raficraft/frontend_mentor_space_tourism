@@ -1,22 +1,26 @@
 /**
  * @jest-environment jsdom
  */
-import "../../jest_mock/matchMedia.mock.js";
 
-import { render } from "@testing-library/react";
+import { render, prettyDOM, waitFor } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Header from "./Header";
 import React from "react";
-import { Logo } from "../../data/svg/logo.js";
+import { NavBar } from "./subComponents/NavBar/NavBar.js";
+import { MemoryRouter } from "react-router-dom";
+import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
-test("header component is render", function () {
-  render(<Header></Header>);
-  const header = screen.getByTestId("header_main");
-  expect(header).not.toBeNull();
-});
+test("header component and child  is render", async () => {
+  const { container, getByText, getByTitle, findByText } = render(
+    <MemoryRouter initialEntries={["/"]}>
+      <Header>
+        <NavBar></NavBar>
+      </Header>
+    </MemoryRouter>
+  );
 
-test("if Logo is present", function () {
-  render(<Header></Header>);
-  const logo = screen.getByTestId("logo");
-  expect(logo).not.toBeNull();
+  expect(container).toBeInTheDocument();
+  expect(getByTitle(/space/i)).toBeInTheDocument();
+  expect(screen.getByTestId("line")).toBeInTheDocument();
+  expect(getByText(/Loading/i)).toBeInTheDocument();
 });

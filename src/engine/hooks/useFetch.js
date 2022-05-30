@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = (url, fields) => {
+export const useFetch = (url, fields, TIME = 1000) => {
   const [data, setData] = useState({
     error: null,
     loading: true,
     items: [],
   });
 
-  const TIME = 1000;
-
   useEffect(() => {
     async function fetchData(fields) {
       try {
         const res = await fetch(url);
         const data = await res.json();
+        console.log(data);
         setTimeout(() => {
           setData((S) => ({ ...S, loading: false, items: data[fields] }));
         }, TIME);

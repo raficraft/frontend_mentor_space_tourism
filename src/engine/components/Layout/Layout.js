@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         {isTablet && <NavBar style="nav_desktop"></NavBar>}
         {isMobil && <BurgerMenu></BurgerMenu>}
       </Header>
-      <main> {children}</main>
+      <main>{children}</main>
     </Wrapper>
   );
 }

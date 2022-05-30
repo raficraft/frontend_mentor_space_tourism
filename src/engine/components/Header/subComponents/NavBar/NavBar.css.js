@@ -1,10 +1,17 @@
 import { S } from "../../../../styled/function";
 import styled from "styled-components";
 
-export const Container_NavBar = styled.nav`
+export const ContainerNavBar = styled.nav`
+  min-height: 99px;
+  .loading {
+    color: white;
+    font-size: 16px;
+    margin: auto;
+  }
+
   .nav_desktop {
     padding: 0 165px 0 123px;
-    ${S.flex("row", "flex-start", "flex-start")};
+    ${S.flex("row", "flex-start", "center")};
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.55px);
 

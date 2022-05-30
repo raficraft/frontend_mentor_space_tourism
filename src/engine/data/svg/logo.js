@@ -7,6 +7,7 @@ export function Logo(props) {
       height="48"
       {...props}
     >
+      <title>Space challenge logo</title>
       <g fill="none" fillRule="evenodd">
         <circle cx="24" cy="24" r="24" fill="#FFF" />
         <path

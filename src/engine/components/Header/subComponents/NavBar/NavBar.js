@@ -1,32 +1,29 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Container_NavBar } from "./NavBar.css";
+import { useFetch } from "../../../../hooks/useFetch";
+import { ContainerNavBar } from "./NavBar.css";
 
 export function NavBar({ style, setter = false }) {
+  const [data] = useFetch("navBar_data.json", "nav", 0);
+
+  function makeLink() {
+    return data.items.map((item, key) => {
+      return (
+        <NavLink to={item.link} key={key} className="text_nav">
+          <span>{item.before}</span>
+          {item.text}
+        </NavLink>
+      );
+    });
+  }
+
   return (
-    <Container_NavBar className={style} data-testid="navBar_main">
-      <NavLink to="/" className="text_nav" onClick={setter ? setter : null}>
-        <span>00</span>Home
-      </NavLink>
-
-      <NavLink
-        to="/destinations"
-        className="text_nav"
-        onClick={setter ? setter : null}
-      >
-        <span>01</span>Destination
-      </NavLink>
-
-      <NavLink to="/crew" className="text_nav" onClick={setter ? setter : null}>
-        <span>02</span>Crew
-      </NavLink>
-
-      <NavLink
-        to="/technology"
-        className="text_nav"
-        onClick={setter ? setter : null}
-      >
-        <span>03</span>Technology
-      </NavLink>
-    </Container_NavBar>
+    <ContainerNavBar className={style} data-testid="navBar_main">
+      {data.loading ? (
+        <p className="loading">Loading navigation</p>
+      ) : (
+        makeLink()
+      )}
+    </ContainerNavBar>
   );
 }
