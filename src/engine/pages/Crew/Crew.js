@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
-import { Crew_Container } from "./Crew.css";
+import { CrewContainer } from "./Crew.css";
 
 export default function Crew() {
   const DATA_TYPE = "crew";
@@ -29,23 +29,27 @@ export default function Crew() {
   function createItem() {
     console.log(data.items[current]);
     return (
-      <section class="crew_content">
-        <div class="crew_content--left">
+      <section className="crew_content">
+        <div className="crew_content--left">
           <article>
             <header>
               <h4>{data.items[current].role}</h4>
               <h3>{data.items[current].name}</h3>
             </header>
-            <p class="text">{data.items[current].bio}</p>
+            <p className="text">{data.items[current].bio}</p>
           </article>
 
           <footer>
             <nav className="nav_dotted">{createNav()}</nav>
           </footer>
         </div>
-        <div class="crew_content--right">
+        <div className="crew_content--right">
           <div className="img_container">
-            <img src={data.items[current].images.png} />
+            <img
+              src={data.items[current].images.webp}
+              alt={`illustration of crew page, portrait of ${data.items[current].name}`}
+              srcSet={`${data.items[current].images.png} , ${data.items[current].images.webp}`}
+            />
           </div>
         </div>
       </section>
@@ -53,7 +57,7 @@ export default function Crew() {
   }
 
   return (
-    <Crew_Container>
+    <CrewContainer>
       <div className="crew">
         <header className="pages_header">
           <h5>
@@ -63,6 +67,6 @@ export default function Crew() {
 
         {!data.loading ? createItem() : <h2>...loading</h2>}
       </div>
-    </Crew_Container>
+    </CrewContainer>
   );
 }

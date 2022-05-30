@@ -16,6 +16,7 @@ export const WrapperHeader = styled.header`
       margin: 24px 0 auto ${S.spacing(8)};
     }
     @media screen and (max-width: 700px) {
+      margin: 24px 0 0 24px;
       svg {
         ${S.size("40px")}
       }

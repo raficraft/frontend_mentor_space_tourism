@@ -1,7 +1,7 @@
 import { S } from "../../styled/function";
 import styled from "styled-components";
 
-export const Crew_Container = styled.section`
+export const CrewContainer = styled.section`
   flex: 1;
 
   .crew {
@@ -120,7 +120,7 @@ export const Crew_Container = styled.section`
           @media screen and (max-width: 700px) {
             margin: 32px auto 0 auto;
             img {
-              ${S.responsiveContainer("50%")}
+              height: 223px;
             }
           }
         }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
-import { Destination_Container } from "./Destination.css";
+import { DestinationContainer } from "./Destination.css";
 
 export default function Destination() {
   const location = useLocation();
@@ -39,7 +39,8 @@ export default function Destination() {
       <section className="destination_content">
         <div className="destination_content--left">
           <img
-            src={data.items[current].images.png}
+            src={data.items[current].images.webp}
+            srcSet={`${data.items[current].images.png}, ${data.items[current].images.webp}`}
             alt={`illustration of ${data.items[current].name}`}
           />
         </div>
@@ -68,7 +69,7 @@ export default function Destination() {
   }
 
   return (
-    <Destination_Container>
+    <DestinationContainer>
       <div className="destination">
         <header className="pages_header">
           <h5>
@@ -77,6 +78,6 @@ export default function Destination() {
         </header>
         {!data.loading ? createItem() : <h2>...loading</h2>}
       </div>
-    </Destination_Container>
+    </DestinationContainer>
   );
 }

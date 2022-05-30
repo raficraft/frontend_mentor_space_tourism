@@ -1,7 +1,7 @@
 import { S } from "../../styled/function";
 import styled from "styled-components";
 
-export const Destination_Container = styled.section`
+export const DestinationContainer = styled.section`
   flex: 1;
 
   .destination {
