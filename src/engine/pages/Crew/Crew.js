@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
+import Loader from "../../Loader/Loader";
 import { CrewContainer } from "./Crew.css";
 
 export default function Crew() {
@@ -57,16 +58,22 @@ export default function Crew() {
   }
 
   return (
-    <CrewContainer>
-      <div className="crew">
-        <header className="pages_header">
-          <h5>
-            <span>02</span>Meet your crew
-          </h5>
-        </header>
+    <>
+      {data.loading ? (
+        <Loader></Loader>
+      ) : (
+        <CrewContainer>
+          <div className="crew">
+            <header className="pages_header">
+              <h5>
+                <span>02</span>Meet your crew
+              </h5>
+            </header>
 
-        {!data.loading ? createItem() : <h2>...loading</h2>}
-      </div>
-    </CrewContainer>
+            {createItem()}
+          </div>
+        </CrewContainer>
+      )}
+    </>
   );
 }

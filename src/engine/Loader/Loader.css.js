@@ -4,10 +4,6 @@ import styled from "styled-components";
 import { Rocket } from "../data/svg/Rocket";
 
 export const LoaderContainer = styled.div`
-  :root {
-    --svg: ;
-  }
-
   position: relative;
   ${S.size("200px")};
   content: " ";

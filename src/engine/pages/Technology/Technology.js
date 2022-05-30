@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { TechContainer } from "./Technology.css";
 import useMediaQuery from "../../hooks/useMediaQueries";
+import Loader from "../../Loader/Loader";
 
 export default function Technology() {
   const location = useLocation();
@@ -65,15 +66,21 @@ export default function Technology() {
   }
 
   return (
-    <TechContainer>
-      <div className="tech">
-        <header className="pages_header">
-          <h5>
-            <span>03</span>Space launch 101
-          </h5>
-        </header>
-        {!data.loading ? createItem() : <h2>...loading</h2>}
-      </div>
-    </TechContainer>
+    <>
+      {data.loading ? (
+        <Loader></Loader>
+      ) : (
+        <TechContainer>
+          <div className="tech">
+            <header className="pages_header">
+              <h5>
+                <span>03</span>Space launch 101
+              </h5>
+            </header>
+            {createItem()}
+          </div>
+        </TechContainer>
+      )}
+    </>
   );
 }
