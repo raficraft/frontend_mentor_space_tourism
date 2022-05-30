@@ -40,4 +40,14 @@ export const anim = {
     transform : scale(0)
   }
 `,
+  rotating: keyframes`
+  
+  0% {
+    transform : rotate(10deg)
+  }
+
+  100%{
+    transform : rotate(370deg)
+  }
+`,
 };

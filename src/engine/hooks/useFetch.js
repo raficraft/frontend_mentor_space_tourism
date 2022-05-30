@@ -7,7 +7,7 @@ export const useFetch = (url, fields) => {
     items: [],
   });
 
-  const TIME = 1500;
+  const TIME = 4500000;
 
   useEffect(() => {
     async function fetchData(fields) {

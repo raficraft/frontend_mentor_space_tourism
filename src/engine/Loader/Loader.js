@@ -24,8 +24,8 @@ export default function Loader() {
       <span style={{ "--i": 17 }}></span>
       <span style={{ "--i": 18 }}></span>
       <span style={{ "--i": 19 }}></span>
-
       <span style={{ "--i": 20 }}></span>
+      <div className="rocket"></div>
     </LoaderContainer>
   );
 }
