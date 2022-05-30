@@ -7,6 +7,8 @@ export const useFetch = (url, fields) => {
     items: [],
   });
 
+  const TIME = 1500;
+
   useEffect(() => {
     async function fetchData(fields) {
       try {
@@ -14,7 +16,7 @@ export const useFetch = (url, fields) => {
         const data = await res.json();
         setTimeout(() => {
           setData((S) => ({ ...S, loading: false, items: data[fields] }));
-        }, 1000);
+        }, TIME);
       } catch (error) {
         setData((S) => ({ ...S, error, loading: true, items: [] }));
         return false;

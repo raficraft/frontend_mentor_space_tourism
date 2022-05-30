@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { DestinationContainer } from "./Destination.css";
+import Loader from "../../Loader/Loader";
 
 export default function Destination() {
   const location = useLocation();
@@ -56,11 +57,11 @@ export default function Destination() {
           <footer>
             <div>
               <p className="subHeading_2">Avg. distance</p>
-              <h4 className="subHeading_1">{data.items[current].distance}</h4>
+              <p className="subHeading_1">{data.items[current].distance}</p>
             </div>
             <div>
               <p className="subHeading_2">Est. travel time</p>
-              <h4 className="subHeading_1">{data.items[current].travel}</h4>
+              <p className="subHeading_1">{data.items[current].travel}</p>
             </div>
           </footer>
         </div>
@@ -69,15 +70,21 @@ export default function Destination() {
   }
 
   return (
-    <DestinationContainer>
-      <div className="destination">
-        <header className="pages_header">
-          <h5>
-            <span>01</span>Pick your destination
-          </h5>
-        </header>
-        {!data.loading ? createItem() : <h2>...loading</h2>}
-      </div>
-    </DestinationContainer>
+    <>
+      {data.loading ? (
+        <Loader></Loader>
+      ) : (
+        <DestinationContainer>
+          <div className="destination">
+            <header className="pages_header">
+              <h5>
+                <span>01</span>Pick your destination
+              </h5>
+            </header>
+            {createItem()}
+          </div>
+        </DestinationContainer>
+      )}
+    </>
   );
 }

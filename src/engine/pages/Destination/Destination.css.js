@@ -6,6 +6,7 @@ export const DestinationContainer = styled.section`
 
   .destination {
     ${S.flex("column", "flex-start", "flex-start")}
+    flex: 1;
 
     @media screen and (max-width: 1000px) {
       ${S.flex("column", "flex-start", "center")}

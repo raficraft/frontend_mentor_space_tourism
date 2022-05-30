@@ -25,6 +25,19 @@ export const anim = {
   }
   100% {
     transform: translateZ(0);
+  }`,
+
+  loader: keyframes`
+  
+  0% {
+    transform : scale(0)
+  }
+  10%{
+    transform : scale(1)
+
+  }
+  80%, 100%{
+    transform : scale(0)
   }
 `,
 };
