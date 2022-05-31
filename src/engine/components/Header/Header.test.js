@@ -11,7 +11,7 @@ import { MemoryRouter } from "react-router-dom";
 import { toBeInTheDocument } from "@testing-library/jest-dom/dist/matchers";
 
 test("header component and child  is render", async () => {
-  const { container, getByText, getByTitle, findByText } = render(
+  const { container, getByText, getByTitle } = render(
     <MemoryRouter initialEntries={["/"]}>
       <Header>
         <NavBar></NavBar>
@@ -22,5 +22,5 @@ test("header component and child  is render", async () => {
   expect(container).toBeInTheDocument();
   expect(getByTitle(/space/i)).toBeInTheDocument();
   expect(screen.getByTestId("line")).toBeInTheDocument();
-  expect(getByText(/Loading/i)).toBeInTheDocument();
+  expect(getByText(/home/i)).toBeInTheDocument();
 });

@@ -6,9 +6,8 @@ import Loader from "../../Loader/Loader";
 
 export default function Destination() {
   const location = useLocation();
-  const DATA_TYPE = location.pathname.substring(1);
-
-  const [data] = useFetch("data.json", DATA_TYPE);
+  const FIELDS = location.pathname.substring(1);
+  const [data] = useFetch("data.json", FIELDS);
   const [current, setCurrent] = useState(0);
 
   function createNav() {

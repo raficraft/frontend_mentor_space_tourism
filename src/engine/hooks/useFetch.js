@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 
+/**
+ *
+ * @param {String} url
+ * @param {String} fields
+ * @param {Number} TIME
+ * @returns
+ */
+
 export const useFetch = (url, fields, TIME = 1000) => {
   const [data, setData] = useState({
     error: null,
@@ -12,7 +20,7 @@ export const useFetch = (url, fields, TIME = 1000) => {
       try {
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data);
+
         setTimeout(() => {
           setData((S) => ({ ...S, loading: false, items: data[fields] }));
         }, TIME);
@@ -22,6 +30,7 @@ export const useFetch = (url, fields, TIME = 1000) => {
       }
     }
     fetchData(fields);
+    return () => fetchData(fields);
   }, []);
 
   return [data];

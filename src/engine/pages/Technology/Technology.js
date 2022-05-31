@@ -7,10 +7,10 @@ import Loader from "../../Loader/Loader";
 
 export default function Technology() {
   const location = useLocation();
-  const DATA_TYPE = location.pathname.substring(1);
+  const FIELDS = location.pathname.substring(1);
   const isTablet = useMediaQuery("(max-width: 1000px)");
 
-  const [data] = useFetch("data.json", DATA_TYPE);
+  const [data] = useFetch("data.json", FIELDS);
   const [current, setCurrent] = useState(0);
 
   function createNav() {

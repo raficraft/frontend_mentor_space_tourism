@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import Loader from "../../Loader/Loader";
 import { CrewContainer } from "./Crew.css";
 
 export default function Crew() {
-  const DATA_TYPE = "crew";
-
-  const [data] = useFetch("data.json", DATA_TYPE);
+  const location = useLocation();
+  const FIELDS = location.pathname.substring(1);
+  const [data] = useFetch("data.json", FIELDS);
   const [current, setCurrent] = useState(0);
 
   function createNav() {

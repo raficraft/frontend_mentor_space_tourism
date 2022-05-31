@@ -7,11 +7,12 @@ import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { NavBar } from "./NavBar";
 
-test("Explore button component and child  is render", async () => {
-  const { container } = render(
+test("Explore button component and child  is render", () => {
+  const { container, getByText } = render(
     <MemoryRouter>
       <NavBar></NavBar>
     </MemoryRouter>
   );
   expect(container).toBeInTheDocument();
+  expect(getByText(/home/i)).toBeInTheDocument();
 });
