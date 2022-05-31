@@ -34,7 +34,6 @@ export default function Technology() {
   }
 
   function createItem() {
-    console.log(data.items[current]);
     return (
       <section className="tech_content">
         <div className="tech_content--left">

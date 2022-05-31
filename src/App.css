@@ -49,6 +49,7 @@ h5 {
 .subHeading_1 {
   font-size: 28px;
   font-family: var(--main-font);
+  text-transform: uppercase;
 }
 
 .subHeading_2 {

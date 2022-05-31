@@ -34,7 +34,6 @@ export default function Destination() {
   }
 
   function createItem() {
-    console.log(data.items[current]);
     return (
       <section className="destination_content">
         <div className="destination_content--left">
